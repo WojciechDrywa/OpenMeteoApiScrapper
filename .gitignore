@@ -1,0 +1,41 @@
+# === Virtual Environment ===
+venv/
+.env/
+.venv/
+
+# === Python cache ===
+__pycache__/
+*.py[cod]
+*.pyo
+
+# === SQLite ===
+*.sqlite
+*.sqlite3
+*.db
+
+# === Logs and runtime ===
+*.log
+*.pid
+*.dbt.log
+*.etl.log
+
+# === VSCode settings ===
+.vscode/
+.settings.json
+
+# === Pytest cache ===
+.pytest_cache/
+.cache/
+.cache.sqlite
+
+# === CSV or temporary data ===
+data/
+*.csv
+
+# === DBT output ===
+dbt_packages/
+target/
+
+# === Misc ===
+.DS_Store
+*.bak
