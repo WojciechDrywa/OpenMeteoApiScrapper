@@ -1,0 +1,271 @@
+[0m20:22:17.448147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029DB7596510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029DB5586710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029DB8215A90>]}
+
+
+============================== 20:22:17.450681 | 7ed4336e-db66-4c99-943d-089dffe16dca ==============================
+[0m20:22:17.450681 [info ] [MainThread]: Running with dbt=1.9.4
+[0m20:22:17.451119 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Wojtek\\.dbt', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init weather_dbt', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:22:17.461436 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object, got 'WindowsPath'.. Dictionary: {'dir': WindowsPath('C:/Users/Wojtek/.dbt')}
+[0m20:22:17.461662 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m20:22:17.462798 [debug] [MainThread]: Starter project path: F:\PythonProjects\OpenMeteoApiScrapper\venv\Lib\site-packages\dbt\include\starter_project
+[0m20:22:17.473680 [info ] [MainThread]: 
+Your new dbt project "weather_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m20:22:17.474028 [info ] [MainThread]: Setting up your profile.
+[0m20:24:55.970060 [info ] [MainThread]: Profile weather_dbt written to C:\Users\Wojtek\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m20:24:55.970804 [debug] [MainThread]: Command `dbt init` succeeded at 20:24:55.970722 after 158.59 seconds
+[0m20:24:55.971031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029DB9954C30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029DB87A7E30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029DB8760C00>]}
+[0m20:24:55.971245 [debug] [MainThread]: Flushing usage events
+[0m20:24:56.780322 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:25:06.221713 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028269C363C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028267C22850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002826A8ADA90>]}
+
+
+============================== 20:25:06.224539 | 4a885ca9-170f-4145-88c7-d8f2a97198c7 ==============================
+[0m20:25:06.224539 [info ] [MainThread]: Running with dbt=1.9.4
+[0m20:25:06.224950 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\Wojtek\\.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:25:06.235894 [info ] [MainThread]: dbt version: 1.9.4
+[0m20:25:06.236112 [info ] [MainThread]: python version: 3.13.3
+[0m20:25:06.236290 [info ] [MainThread]: python path: F:\PythonProjects\OpenMeteoApiScrapper\venv\Scripts\python.exe
+[0m20:25:06.236451 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m20:25:06.269607 [info ] [MainThread]: Using profiles dir at C:\Users\Wojtek\.dbt
+[0m20:25:06.269901 [info ] [MainThread]: Using profiles.yml file at C:\Users\Wojtek\.dbt\profiles.yml
+[0m20:25:06.270195 [info ] [MainThread]: Using dbt_project.yml file at F:\PythonProjects\OpenMeteoApiScrapper\dbt_project.yml
+[0m20:25:06.270768 [info ] [MainThread]: adapter type: postgres
+[0m20:25:06.271014 [info ] [MainThread]: adapter version: 1.9.0
+[0m20:25:06.271230 [info ] [MainThread]: Configuration:
+[0m20:25:06.271401 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:25:06.271558 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m20:25:06.271710 [info ] [MainThread]: Required dependencies:
+[0m20:25:06.271871 [debug] [MainThread]: Executing "git --help"
+[0m20:25:06.292327 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:25:06.292601 [debug] [MainThread]: STDERR: "b''"
+[0m20:25:06.292832 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:25:06.293045 [info ] [MainThread]: Connection:
+[0m20:25:06.293242 [info ] [MainThread]:   host: localhost
+[0m20:25:06.293399 [info ] [MainThread]:   port: 5432
+[0m20:25:06.293560 [info ] [MainThread]:   user: test
+[0m20:25:06.293727 [info ] [MainThread]:   database: weather_data
+[0m20:25:06.294269 [info ] [MainThread]:   schema: public
+[0m20:25:06.294428 [info ] [MainThread]:   connect_timeout: 10
+[0m20:25:06.294568 [info ] [MainThread]:   role: None
+[0m20:25:06.294712 [info ] [MainThread]:   search_path: None
+[0m20:25:06.294921 [info ] [MainThread]:   keepalives_idle: 0
+[0m20:25:06.295082 [info ] [MainThread]:   sslmode: None
+[0m20:25:06.295223 [info ] [MainThread]:   sslcert: None
+[0m20:25:06.295361 [info ] [MainThread]:   sslkey: None
+[0m20:25:06.295495 [info ] [MainThread]:   sslrootcert: None
+[0m20:25:06.295701 [info ] [MainThread]:   application_name: dbt
+[0m20:25:06.295909 [info ] [MainThread]:   retries: 1
+[0m20:25:06.296191 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m20:25:06.422165 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m20:25:07.249875 [debug] [MainThread]: Using postgres connection "debug"
+[0m20:25:07.250161 [debug] [MainThread]: On debug: select 1 as id
+[0m20:25:07.250307 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:25:07.279272 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m20:25:07.279502 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m20:25:07.279725 [debug] [MainThread]: On debug: No close available on handle
+[0m20:25:07.279900 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m20:25:07.280215 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m20:25:07.280540 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <F:\PythonProjects\OpenMeteoApiScrapper\dbt_project.yml> not found
+
+[0m20:25:07.280730 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  'utf-8' codec can't decode byte 0xb3 in position 92: invalid start byte
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m20:25:07.281269 [debug] [MainThread]: Command `dbt debug` failed at 20:25:07.281197 after 1.16 seconds
+[0m20:25:07.281431 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:25:07.281589 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002826C238FC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002826AF82D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002826BFFC160>]}
+[0m20:25:07.281791 [debug] [MainThread]: Flushing usage events
+[0m20:25:07.935526 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:25:35.987431 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E91A3E63C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E9183D2850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E91B05DA90>]}
+
+
+============================== 20:25:35.990117 | 4c5f53bf-ec48-4059-bc3a-2d3ef73dbc35 ==============================
+[0m20:25:35.990117 [info ] [MainThread]: Running with dbt=1.9.4
+[0m20:25:35.990501 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Wojtek\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt init weather_dbt', 'send_anonymous_usage_stats': 'True'}
+[0m20:25:36.000729 [info ] [MainThread]: A project called weather_dbt already exists here.
+[0m20:25:36.001207 [debug] [MainThread]: Command `dbt init` succeeded at 20:25:36.001135 after 0.08 seconds
+[0m20:25:36.001374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E91B5CC2B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E91B5AF770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E91B36B9B0>]}
+[0m20:25:36.001547 [debug] [MainThread]: Flushing usage events
+[0m20:25:36.660549 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:26:55.881328 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015FBD9EE3C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015FBBA02850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015FBE68DA90>]}
+
+
+============================== 20:26:55.883740 | a11a9071-8b40-41b9-8667-9a4e8e008ed9 ==============================
+[0m20:26:55.883740 [info ] [MainThread]: Running with dbt=1.9.4
+[0m20:26:55.884123 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Wojtek\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt init weather_dbt', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:26:55.894763 [debug] [MainThread]: Starter project path: F:\PythonProjects\OpenMeteoApiScrapper\venv\Lib\site-packages\dbt\include\starter_project
+[0m20:26:55.900369 [info ] [MainThread]: 
+Your new dbt project "weather_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m20:26:55.900649 [info ] [MainThread]: Setting up your profile.
+[0m20:27:29.196914 [info ] [MainThread]: Profile weather_dbt written to C:\Users\Wojtek\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m20:27:29.197613 [debug] [MainThread]: Command `dbt init` succeeded at 20:27:29.197532 after 33.41 seconds
+[0m20:27:29.197816 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015FBEBFEC40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015FBEC8F2F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015FBE99B9B0>]}
+[0m20:27:29.198024 [debug] [MainThread]: Flushing usage events
+[0m20:27:29.901551 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:27:40.750513 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F2C6F63C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F2A6DE850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F2D36DA90>]}
+
+
+============================== 20:27:40.752968 | d7e091b3-09b5-4a30-9d28-2418d8918385 ==============================
+[0m20:27:40.752968 [info ] [MainThread]: Running with dbt=1.9.4
+[0m20:27:40.753376 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Wojtek\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:27:40.763860 [info ] [MainThread]: dbt version: 1.9.4
+[0m20:27:40.764071 [info ] [MainThread]: python version: 3.13.3
+[0m20:27:40.764239 [info ] [MainThread]: python path: F:\PythonProjects\OpenMeteoApiScrapper\venv\Scripts\python.exe
+[0m20:27:40.764402 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m20:27:40.795554 [info ] [MainThread]: Using profiles dir at C:\Users\Wojtek\.dbt
+[0m20:27:40.795837 [info ] [MainThread]: Using profiles.yml file at C:\Users\Wojtek\.dbt\profiles.yml
+[0m20:27:40.796097 [info ] [MainThread]: Using dbt_project.yml file at F:\PythonProjects\OpenMeteoApiScrapper\dbt_project.yml
+[0m20:27:40.796586 [info ] [MainThread]: adapter type: postgres
+[0m20:27:40.796797 [info ] [MainThread]: adapter version: 1.9.0
+[0m20:27:40.796994 [info ] [MainThread]: Configuration:
+[0m20:27:40.797154 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:27:40.797307 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m20:27:40.797457 [info ] [MainThread]: Required dependencies:
+[0m20:27:40.797612 [debug] [MainThread]: Executing "git --help"
+[0m20:27:40.816510 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:27:40.816736 [debug] [MainThread]: STDERR: "b''"
+[0m20:27:40.816905 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:27:40.817089 [info ] [MainThread]: Connection:
+[0m20:27:40.817242 [info ] [MainThread]:   host: localhost
+[0m20:27:40.817387 [info ] [MainThread]:   port: 5432
+[0m20:27:40.817592 [info ] [MainThread]:   user: postgres
+[0m20:27:40.817755 [info ] [MainThread]:   database: weather_data
+[0m20:27:40.817901 [info ] [MainThread]:   schema: public
+[0m20:27:40.818040 [info ] [MainThread]:   connect_timeout: 10
+[0m20:27:40.818179 [info ] [MainThread]:   role: None
+[0m20:27:40.818314 [info ] [MainThread]:   search_path: None
+[0m20:27:40.818449 [info ] [MainThread]:   keepalives_idle: 0
+[0m20:27:40.818592 [info ] [MainThread]:   sslmode: None
+[0m20:27:40.818726 [info ] [MainThread]:   sslcert: None
+[0m20:27:40.818857 [info ] [MainThread]:   sslkey: None
+[0m20:27:40.818987 [info ] [MainThread]:   sslrootcert: None
+[0m20:27:40.819117 [info ] [MainThread]:   application_name: dbt
+[0m20:27:40.819244 [info ] [MainThread]:   retries: 1
+[0m20:27:40.819482 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m20:27:40.945297 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m20:27:40.979843 [debug] [MainThread]: Using postgres connection "debug"
+[0m20:27:40.980013 [debug] [MainThread]: On debug: select 1 as id
+[0m20:27:40.980157 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:27:41.008334 [debug] [MainThread]: SQL status: SELECT 1 in 0.028 seconds
+[0m20:27:41.008801 [debug] [MainThread]: On debug: Close
+[0m20:27:41.008975 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:27:41.009236 [info ] [MainThread]: [31m1 check failed:[0m
+[0m20:27:41.009600 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <F:\PythonProjects\OpenMeteoApiScrapper\dbt_project.yml> not found
+
+[0m20:27:41.010170 [debug] [MainThread]: Command `dbt debug` failed at 20:27:41.010086 after 0.33 seconds
+[0m20:27:41.010379 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:27:41.010542 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F2ECF8FC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F2DA43410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F2EAC1480>]}
+[0m20:27:41.010729 [debug] [MainThread]: Flushing usage events
+[0m20:27:41.696744 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:29:38.298330 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B0B45E63C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B0B25CE850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B0B525DA90>]}
+
+
+============================== 20:29:38.300708 | cda0968c-17d6-4564-9fb0-62b70f38fc0b ==============================
+[0m20:29:38.300708 [info ] [MainThread]: Running with dbt=1.9.4
+[0m20:29:38.301108 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Wojtek\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:29:38.311657 [info ] [MainThread]: dbt version: 1.9.4
+[0m20:29:38.311876 [info ] [MainThread]: python version: 3.13.3
+[0m20:29:38.312057 [info ] [MainThread]: python path: F:\PythonProjects\OpenMeteoApiScrapper\venv\Scripts\python.exe
+[0m20:29:38.312222 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m20:29:38.343968 [info ] [MainThread]: Using profiles dir at C:\Users\Wojtek\.dbt
+[0m20:29:38.344258 [info ] [MainThread]: Using profiles.yml file at C:\Users\Wojtek\.dbt\profiles.yml
+[0m20:29:38.344489 [info ] [MainThread]: Using dbt_project.yml file at F:\PythonProjects\OpenMeteoApiScrapper\dbt_project.yml
+[0m20:29:38.345035 [info ] [MainThread]: adapter type: postgres
+[0m20:29:38.345306 [info ] [MainThread]: adapter version: 1.9.0
+[0m20:29:38.345518 [info ] [MainThread]: Configuration:
+[0m20:29:38.345696 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:29:38.345859 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m20:29:38.346009 [info ] [MainThread]: Required dependencies:
+[0m20:29:38.346162 [debug] [MainThread]: Executing "git --help"
+[0m20:29:38.364725 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:29:38.364971 [debug] [MainThread]: STDERR: "b''"
+[0m20:29:38.365215 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:29:38.365459 [info ] [MainThread]: Connection:
+[0m20:29:38.365636 [info ] [MainThread]:   host: localhost
+[0m20:29:38.365788 [info ] [MainThread]:   port: 5432
+[0m20:29:38.365932 [info ] [MainThread]:   user: postgres
+[0m20:29:38.366072 [info ] [MainThread]:   database: weather_data
+[0m20:29:38.366213 [info ] [MainThread]:   schema: public
+[0m20:29:38.366355 [info ] [MainThread]:   connect_timeout: 10
+[0m20:29:38.366493 [info ] [MainThread]:   role: None
+[0m20:29:38.366626 [info ] [MainThread]:   search_path: None
+[0m20:29:38.366759 [info ] [MainThread]:   keepalives_idle: 0
+[0m20:29:38.366889 [info ] [MainThread]:   sslmode: None
+[0m20:29:38.367035 [info ] [MainThread]:   sslcert: None
+[0m20:29:38.367274 [info ] [MainThread]:   sslkey: None
+[0m20:29:38.367672 [info ] [MainThread]:   sslrootcert: None
+[0m20:29:38.367947 [info ] [MainThread]:   application_name: dbt
+[0m20:29:38.368265 [info ] [MainThread]:   retries: 1
+[0m20:29:38.368581 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m20:29:38.498785 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m20:29:38.536328 [debug] [MainThread]: Using postgres connection "debug"
+[0m20:29:38.536548 [debug] [MainThread]: On debug: select 1 as id
+[0m20:29:38.536688 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:29:38.566754 [debug] [MainThread]: SQL status: SELECT 1 in 0.030 seconds
+[0m20:29:38.567332 [debug] [MainThread]: On debug: Close
+[0m20:29:38.567539 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:29:38.567880 [info ] [MainThread]: [31m1 check failed:[0m
+[0m20:29:38.568650 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <F:\PythonProjects\OpenMeteoApiScrapper\dbt_project.yml> not found
+
+[0m20:29:38.569266 [debug] [MainThread]: Command `dbt debug` failed at 20:29:38.569188 after 0.37 seconds
+[0m20:29:38.569489 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:29:38.569739 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B0B6C48FC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B0B6963410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B0B6A11480>]}
+[0m20:29:38.570013 [debug] [MainThread]: Flushing usage events
+[0m20:29:39.301448 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:28:21.447586 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020E01A363C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020E7FA1E850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020E026ADA90>]}
+
+
+============================== 15:28:21.451372 | 06e14cc4-e2b8-4ce5-9607-666de8748daf ==============================
+[0m15:28:21.451372 [info ] [MainThread]: Running with dbt=1.9.4
+[0m15:28:21.451771 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Wojtek\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m15:28:21.452076 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path F:\PythonProjects\OpenMeteoApiScrapper\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:28:21.452676 [debug] [MainThread]: Command `dbt run` failed at 15:28:21.452598 after 0.06 seconds
+[0m15:28:21.452864 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020E02A72EA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020E029F3890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020E02BE0050>]}
+[0m15:28:21.453046 [debug] [MainThread]: Flushing usage events
+[0m15:28:22.153118 [debug] [MainThread]: An error was encountered while trying to flush usage events

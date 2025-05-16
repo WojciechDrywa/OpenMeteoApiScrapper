@@ -1,0 +1,451 @@
+version: 2
+
+models:
+  - name: stg_hourly_current
+    description: "Staging model for hourly current weather data"
+    columns:
+      - name: timestamp
+        tests:
+          - not_null
+      - name: location
+        tests:
+          - not_null
+
+  - name: stg_hourly_forecast
+    description: "Staging model for hourly forecast weather data"
+    columns:
+      - name: timestamp
+        tests:
+          - not_null
+      - name: location
+        tests:
+          - not_null
+
+  - name: stg_hourly_historical
+    description: "Staging model for hourly historical weather data"
+    columns:
+      - name: timestamp
+        tests:
+          - not_null
+      - name: location
+        tests:
+          - not_null
+
+  - name: stg_daily_current
+    description: "Staging model for daily current weather data"
+    columns:
+      - name: timestamp
+        tests:
+          - not_null
+      - name: location
+        tests:
+          - not_null
+
+  - name: stg_daily_forecast
+    description: "Staging model for daily forecast weather data"
+    columns:
+      - name: timestamp
+        tests:
+          - not_null
+      - name: location
+        tests:
+          - not_null
+
+  - name: stg_daily_historical
+    description: "Staging model for daily historical weather data"
+    columns:
+      - name: timestamp
+        tests:
+          - not_null
+      - name: location
+        tests:
+          - not_null
+
+  - name: clean_hourly_current
+    description: "Cleaned hourly current weather data"
+    columns:
+      - name: timestamp
+        tests:
+          - not_null
+      - name: location
+        tests:
+          - not_null
+      - name: temperature_2m
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: -60
+              max_value: 60
+      - name: relative_humidity_2m
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 100
+      - name: cloud_cover
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 100
+      - name: apparent_temperature
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: -60
+              max_value: 60
+      - name: wind_speed_10m
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 200
+      - name: wind_direction_10m
+        tests:
+          - not_null
+      - name: wind_gusts_10m
+        tests:
+          - not_null
+      - name: snowfall
+        tests:
+          - not_null
+      - name: precipitation_probability
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 100
+      - name: rain
+        tests: 
+          - not_null
+      - name: showers
+        tests:
+          - not_null
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: 
+            - timestamp
+            - location
+
+  - name: clean_hourly_forecast
+    description: "Cleaned hourly forecast weather data"
+    columns:
+      - name: timestamp
+        tests:
+          - not_null
+      - name: location
+        tests:
+          - not_null
+      - name: temperature_2m
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: -60
+              max_value: 60
+      - name: relative_humidity_2m
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 100
+      - name: cloud_cover
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 100
+      - name: apparent_temperature
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: -60
+              max_value: 60
+      - name: wind_speed_10m
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 200
+      - name: wind_direction_10m
+        tests:
+          - not_null
+      - name: wind_gusts_10m
+        tests:
+          - not_null
+      - name: snowfall
+        tests:
+          - not_null
+      - name: precipitation_probability
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 100
+      - name: rain
+        tests: 
+          - not_null
+      - name: showers
+        tests:
+          - not_null
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: 
+            - timestamp
+            - location
+
+  - name: clean_hourly_historical
+    description: "Cleaned hourly historical weather data"
+    columns:
+      - name: timestamp
+        tests:
+          - not_null
+      - name: location
+        tests:
+          - not_null
+      - name: temperature_2m
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: -60
+              max_value: 60
+      - name: relative_humidity_2m
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 100
+      - name: cloud_cover
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 100
+      - name: apparent_temperature
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: -60
+              max_value: 60
+      - name: wind_speed_10m
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 200
+      - name: wind_direction_10m
+        tests:
+          - not_null
+      - name: wind_gusts_10m
+        tests:
+          - not_null
+      - name: snowfall
+        tests:
+          - not_null
+      - name: precipitation_probability
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 100
+      - name: rain
+        tests: 
+          - not_null
+      - name: showers
+        tests:
+          - not_null
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: 
+            - timestamp
+            - location
+
+  - name: clean_daily_current
+    description: "Cleaned daily current weather data"
+    columns:
+      - name: timestamp
+        tests:
+          - not_null
+      - name: location
+        tests:
+          - not_null
+      - name: temperature_2m_max
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: -60
+              max_value: 60
+      - name: temperature_2m_min
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: -60
+              max_value: 60
+      - name: precipitation_sum
+        tests:
+          - not_null
+      - name: rain_sum
+        tests:
+          - not_null
+      - name: snowfall_sum
+        tests:
+          - not_null
+      - name: precipitation_hours
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 24
+      - name: sunshine_duration
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1440
+      - name: daylight_duration
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1440
+      - name: wind_speed_10m_max
+        tests:
+          - not_null
+      - name: wind_gusts_10m_max
+        tests:
+          - not_null
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: 
+            - timestamp
+            - location
+
+  - name: clean_daily_forecast
+    description: "Cleaned daily forecast weather data"
+    columns:
+      - name: timestamp
+        tests:
+          - not_null
+      - name: location
+        tests:
+          - not_null
+      - name: temperature_2m_max
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: -60
+              max_value: 60
+      - name: temperature_2m_min
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: -60
+              max_value: 60
+      - name: precipitation_sum
+        tests:
+          - not_null
+      - name: rain_sum
+        tests:
+          - not_null
+      - name: snowfall_sum
+        tests:
+          - not_null
+      - name: precipitation_hours
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 24
+      - name: sunshine_duration
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1440
+      - name: daylight_duration
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1440
+      - name: wind_speed_10m_max
+        tests:
+          - not_null
+      - name: wind_gusts_10m_max
+        tests:
+          - not_null
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: 
+            - timestamp
+            - location
+
+  - name: clean_daily_historical
+    description: "Cleaned daily historical weather data"
+    columns:
+      - name: timestamp
+        tests:
+          - not_null
+      - name: location
+        tests:
+          - not_null
+      - name: temperature_2m_max
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: -60
+              max_value: 60
+      - name: temperature_2m_min
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: -60
+              max_value: 60
+      - name: precipitation_sum
+        tests:
+          - not_null
+      - name: rain_sum
+        tests:
+          - not_null
+      - name: snowfall_sum
+        tests:
+          - not_null
+      - name: precipitation_hours
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 24
+      - name: sunshine_duration
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1440
+      - name: daylight_duration
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1440
+      - name: wind_speed_10m_max
+        tests:
+          - not_null
+      - name: wind_gusts_10m_max
+        tests:
+          - not_null
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: 
+            - timestamp
+            - location
+
+sources:
+  - name: weather_data
+    schema: public
+    tables:
+      - name: hourly_forecast
+      - name: hourly_historical
+      - name: hourly_current
+      - name: daily_forecast
+      - name: daily_historical
+      - name: daily_current

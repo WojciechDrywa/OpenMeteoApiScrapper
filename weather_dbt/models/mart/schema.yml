@@ -1,0 +1,119 @@
+version: 2
+
+models:
+  - name: mart_temperature_daily
+    description: "Daily temperature data"
+    columns:
+      - name: location
+        tests:
+          - not_null
+      - name: date
+        tests:
+          - not_null
+      - name: avg_temperature
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: -60
+              max_value: 60
+      - name: max_temperature
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: -60
+              max_value: 60
+      - name: min_temperature
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: -60
+              max_value: 60
+      - name: source
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['forecast', 'historical']
+
+  - name: mart_temperature_hourly
+    description: "Hourly temperature data"
+    columns:
+      - name: location
+        tests:
+          - not_null
+      - name: date
+        tests:
+          - not_null
+      - name: avg_temperature
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: -60
+              max_value: 60
+      - name: source
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['forecast', 'historical']
+
+  - name: mart_precipitation_daily
+    description: "Daily precipitation data"
+    columns:
+      - name: location
+        tests:
+          - not_null
+      - name: date
+        tests:
+          - not_null
+      - name: avg_precipitation
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 300
+      - name: total_precipitation
+        tests:
+          - not_null
+      - name: total_precipitation_hours
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 24
+      - name: rain
+        tests:
+          - not_null
+      - name: snow
+        tests:
+          - not_null
+      - name: source
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['forecast', 'historical']
+
+  - name: mart_precipitation_hourly
+    description: "Hourly precipitation data"
+    columns:
+      - name: location
+        tests:
+          - not_null
+      - name: date
+        tests:
+          - not_null
+      - name: precipitation_probability
+        tests:
+          - not_null:
+              where: "source = 'forecast'"
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 100
+              where: "source = 'forecast'"
+      - name: rain
+        tests:
+          - not_null
+      - name: showers
+        tests:
+          - not_null
+      - name: source
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['forecast', 'historical']
