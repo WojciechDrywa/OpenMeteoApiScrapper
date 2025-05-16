@@ -1,2 +1,0 @@
-time,temperature_2m_max,temperature_2m_min,precipitation_sum,rain_sum,snowfall_sum,precipitation_hours,sunshine_duration,daylight_duration,wind_speed_10m_max,wind_gusts_10m_max
-2025-05-16 00:00:00+00:00,9.8,5.0,10.0,10.0,0.0,11.0,18585.93,57721.55,20.674158,40.68
