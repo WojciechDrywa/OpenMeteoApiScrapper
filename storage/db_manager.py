@@ -1,6 +1,6 @@
 from sqlalchemy import text
 from storage.db_config import get_db_engine
-from logger_config import logger
+from weather_data_loader.logger_config import logger
 
 def create_table(filepath = "storage/schema.sql"):
     engine = get_db_engine()

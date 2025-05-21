@@ -5,7 +5,7 @@ from datetime import date, timedelta
 from weather.writer import WeatherWriter
 from weather_data_loader.weather_data_loader import WeatheDataLoader
 
-def main():
+def run_etl_pipline():
     for place_key, location in LOCATIONS.items():
         location = LOCATIONS[place_key]
         lat = location["latitude"]
@@ -50,4 +50,4 @@ def main():
             loader.save_to_db(df, table_name=table)
     
 if __name__ == "__main__":
-    main()
+    run_etl_pipline()

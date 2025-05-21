@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 from typing import Any, List
-from logger_config import logger
+from weather_data_loader.logger_config import logger
 
 class WeatherWriter:
     def save_hourly_data_to_csv(self, response: Any, variable_names: List[str], filename: str):

@@ -1,0 +1,29 @@
+# Core
+pandas>=1.5.3
+requests>=2.31.0
+retry-requests>=2.0.0
+openmeteo-requests>=1.0.0
+
+# Date handling
+datetime
+
+# Logging
+loguru
+
+# PostgreSQL
+sqlalchemy>=2.0.30
+psycopg2-binary>=2.9.9
+
+# Airflow
+apache-airflow==2.10.5
+
+# dbt and optional
+dbt-core>=1.6.0
+
+# Testing
+pytest>=8.0.0
+
+# Typing support
+mypy
+
+urllib3>=1.26,<2.0
